@@ -22,6 +22,7 @@ jobs:
         run: npm install
 
       - name: Build
+        echo "PUBLIC_URL=https://mmoufakkir1.github.io/mo-website" > .env.production
         run: npm run build
 
       - name: Deploy to GitHub Pages
