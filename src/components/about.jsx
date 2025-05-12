@@ -1,43 +1,12 @@
 import React from "react";
 
-export const About = (props) => {
-  return (
-    <div id="about">
-      <div className="container">
-        <div className="row">
-          <div className="col-xs-12 col-md-6">
-            {" "}
-            <img src="img/about.jpg" className="img-responsive" alt="" />{" "}
-          </div>
-          <div className="col-xs-12 col-md-6">
-            <div className="about-text">
-              <h2>About Us</h2>
-              <p>{props.data ? props.data.paragraph : "loading..."}</p>
-              <h3>Why Choose Us?</h3>
-              <div className="list-style">
-                <div className="col-lg-6 col-sm-6 col-xs-12">
-                  <ul>
-                    {props.data
-                      ? props.data.Why.map((d, i) => (
-                          <li key={`${d}-${i}`}>{d}</li>
-                        ))
-                      : "loading"}
-                  </ul>
-                </div>
-                <div className="col-lg-6 col-sm-6 col-xs-12">
-                  <ul>
-                    {props.data
-                      ? props.data.Why2.map((d, i) => (
-                          <li key={`${d}-${i}`}> {d}</li>
-                        ))
-                      : "loading"}
-                  </ul>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
+export const About = () => (
+  <section className="about-section">
+    <div className="container">
+      <h2>About Me</h2>
+      <p>
+        Results-driven Full-Stack Developer with expertise in Node.js, React.js, and C#, and strong experience in cloud-based solutions, microservices architecture, and RESTful API development. Proficient in front-end and back-end technologies, including React, Angular, TypeScript, and .NET Core. Adept at debugging, performance optimization, and troubleshooting complex systems. Experienced in Agile methodologies and DevOps practices, with a strong focus on CI/CD, cloud infrastructure, and system integrations.
+      </p> 
     </div>
-  );
-};
+  </section>
+);

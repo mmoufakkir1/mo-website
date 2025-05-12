@@ -11,7 +11,7 @@ export const Navigation = ({ onThemeToggle, isDarkTheme }) => {
             data-toggle="collapse"
             data-target="#bs-example-navbar-collapse-1"
           >
-            {" "}
+            
             <span className="sr-only">Toggle navigation</span>{" "}
             <span className="icon-bar"></span>{" "}
             <span className="icon-bar"></span>{" "}
@@ -21,52 +21,40 @@ export const Navigation = ({ onThemeToggle, isDarkTheme }) => {
             <img
               src="img/logo.png"
               alt="Logo"
-              style={{ height: 32, marginRight: 10, verticalAlign: 'middle', display: 'inline-block' }}
             />
-            Mohammed Moufakkir Homepage
-          </a>{" "}
+          </a>
         </div>
 
         <div
           className="collapse navbar-collapse"
           id="bs-example-navbar-collapse-1"
         >
-          <ul className="nav navbar-nav navbar-right">
-            <li>
-              <a href="#features" className="page-scroll">
-                Features
-              </a>
-            </li>
+          <ul className="nav navbar-nav navbar-right"> 
             <li>
               <a href="#about" className="page-scroll">
                 About
               </a>
             </li>
-            {/* <li>
-              <a href="#services" className="page-scroll">
-                Services
+            <li>
+              <a href="#skills" className="page-scroll">
+                Skills
               </a>
-            </li> */}
+            </li>
+            <li>
+              <a href="#timeline" className="page-scroll">
+                Experience
+              </a>
+            </li>
             <li>
               <a href="#portfolio" className="page-scroll">
                 Gallery
               </a>
             </li>
-            {/* <li>
-              <a href="#testimonials" className="page-scroll">
-                Testimonials
-              </a>
-            </li> */}
-            {/* <li>
-              <a href="#team" className="page-scroll">
-                Team
-              </a>
-            </li> */}
             <li>
               <a href="#contact" className="page-scroll">
                 Contact
               </a>
-            </li>
+            </li> 
             <li>
               <button 
                 onClick={onThemeToggle}

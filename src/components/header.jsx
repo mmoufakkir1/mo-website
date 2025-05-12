@@ -1,31 +1,86 @@
-import React from "react";
+import React, { useEffect, useRef, useState } from "react";
 
 export const Header = (props) => {
+  // Animated text effect
+  const titles = [
+    "Full Stack Developer",
+    "Digital Creator",
+    "Open Source Enthusiast"
+  ];
+  const [current, setCurrent] = React.useState(0);
+  const [fade, setFade] = React.useState(true);
+  const [showScrollTop, setShowScrollTop] = useState(false);
+  const timeoutRef = useRef(null);
+
+  useEffect(() => {
+    timeoutRef.current = setTimeout(() => {
+      setFade(false);
+      setTimeout(() => {
+        setCurrent((prev) => (prev + 1) % titles.length);
+        setFade(true);
+      }, 400);
+    }, 2200);
+    return () => clearTimeout(timeoutRef.current);
+  }, [current, fade]);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      if (window.scrollY > 300) {
+        setShowScrollTop(true);
+      } else {
+        setShowScrollTop(false);
+      }
+    };
+
+    window.addEventListener('scroll', handleScroll);
+    return () => window.removeEventListener('scroll', handleScroll);
+  }, []);
+
+  const scrollToTop = () => {
+    window.scrollTo({
+      top: 0,
+      behavior: 'smooth'
+    });
+  };
+
   return (
-    <header id="header">
-      <div className="intro">
-        <div className="overlay">
-          <div className="container">
-            <div className="row">
-              <div className="col-md-8 col-md-offset-2 intro-text">
-                <h1>
-                  {props.data ? props.data.title : "Loading"}
-                  <span></span>
-                </h1>
-                <p>{props.data ? props.data.paragraph : "Loading"}</p>
-                <div className="header-buttons">
-                  <a
-                    href="#features"
-                    className="btn btn-custom btn-lg page-scroll"
-                  >
-                    Learn More
-                  </a> 
+    <>
+      <header id="header">
+        <div className="intro hero-section" style={{ backgroundImage: "url(img/portfolio/01-large.jpg)" }}>
+          <div className="overlay">
+            <div className="container">
+              <div className="row">
+                <div className="col-md-8 col-md-offset-2 intro-text hero-content">
+                  <h1>
+                    {props.data ? props.data.title : "Loading"}
+                  </h1>
+                  <h2 className={`hero-animated-text${fade ? " fade-in" : " fade-out"}`}>
+                    {titles[current]}
+                  </h2>
+                  <p>{props.data ? props.data.paragraph : "Loading"}</p>
+                  <div className="header-buttons">
+                    <a
+                      href="#timeline"
+                      className="btn btn-custom btn-lg page-scroll"
+                    >
+                      Learn More
+                    </a>
+                  </div>
                 </div>
               </div>
             </div>
           </div>
         </div>
-      </div>
-    </header>
+      </header>
+      {showScrollTop && (
+        <button 
+          onClick={scrollToTop}
+          className="scroll-to-top"
+          aria-label="Back to top"
+        >
+          <i className="fa fa-arrow-up"></i>
+        </button>
+      )}
+    </>
   );
 };
