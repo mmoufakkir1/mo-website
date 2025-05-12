@@ -4,8 +4,21 @@ export const Header = (props) => {
   // Animated text effect
   const titles = [
     "Full Stack Developer",
-    "Digital Creator",
-    "Open Source Enthusiast"
+    "Software Engineer",
+    "Problem Solver",
+    "React Developer",
+    "DotNet Developer",
+    "Team Player",
+    "git guru",
+    "Open Source Enthusiast",
+    "Cloud Engineer",
+    "DevOps Engineer",
+    "AI/ML Enthusiast", 
+    "Cybersecurity Specialist",
+    "Cloud Architect",   
+    "Problem Solver",
+    
+    
   ];
   const [current, setCurrent] = React.useState(0);
   const [fade, setFade] = React.useState(true);
@@ -21,7 +34,7 @@ export const Header = (props) => {
       }, 400);
     }, 2200);
     return () => clearTimeout(timeoutRef.current);
-  }, [current, fade]);
+  }, [current, fade, titles.length]);
 
   useEffect(() => {
     const handleScroll = () => {
