@@ -1,0 +1,126 @@
+{
+  "Header": {
+    "title": "Mohammed Moufakkir",
+    "paragraph": "Full Stack Developer | Software Engineer | Problem Solver"
+  },
+  "About": {
+    "paragraph": "I am a passionate Full Stack Developer with expertise in building modern web applications. With a strong foundation in both frontend and backend technologies, I create efficient, scalable, and user-friendly solutions. My experience spans across various technologies including React, Node.js, and cloud services.",
+    "Why": [
+      "Full Stack Development",
+      "Cloud Architecture",
+      "API Development",
+      "Database Design"
+    ],
+    "Why2": [
+      "Problem Solving",
+      "Team Collaboration",
+      "Agile Development",
+      "Continuous Learning"
+    ]
+  },
+  "Gallery": [
+    {
+      "title": "UniConversions",
+      "largeImage": "img/portfolio/personal/uniconversions.png",
+      "smallImage": "img/portfolio/personal/uniconversions.png",
+      "link": "https://uniconversions.com"
+    },
+    {
+      "title": "Task Management App",
+      "largeImage": "img/portfolio/02-large.jpg",
+      "smallImage": "img/portfolio/02-small.jpg"
+    },
+    {
+      "title": "Social Media Dashboard",
+      "largeImage": "img/portfolio/03-large.jpg",
+      "smallImage": "img/portfolio/03-small.jpg"
+    }
+  ],
+  "Services": [
+    {
+      "icon": "fa fa-code",
+      "name": "Web Development",
+      "text": "Building responsive and modern web applications using React, Node.js, and other cutting-edge technologies."
+    },
+    {
+      "icon": "fa fa-mobile",
+      "name": "Mobile Development",
+      "text": "Creating cross-platform mobile applications with React Native and Flutter for iOS and Android."
+    },
+    {
+      "icon": "fa fa-database",
+      "name": "Database Design",
+      "text": "Designing and implementing efficient database solutions using SQL and NoSQL technologies."
+    },
+    {
+      "icon": "fa fa-cloud",
+      "name": "Cloud Services",
+      "text": "Deploying and managing applications on cloud platforms like AWS, Azure, and Google Cloud."
+    },
+    {
+      "icon": "fa fa-cogs",
+      "name": "API Development",
+      "text": "Creating robust RESTful APIs and microservices for scalable applications."
+    },
+    {
+      "icon": "fa fa-shield",
+      "name": "Security",
+      "text": "Implementing security best practices and ensuring data protection in applications."
+    }
+  ],
+  "Testimonials": [
+    {
+      "img": "img/testimonials/01.jpg",
+      "text": "\"Mohammed is an exceptional developer who consistently delivers high-quality solutions. His technical expertise and problem-solving skills are outstanding.\"",
+      "name": "John Smith"
+    },
+    {
+      "img": "img/testimonials/02.jpg",
+      "text": "\"Working with Mohammed was a great experience. He's not only technically skilled but also a great team player and communicator.\"",
+      "name": "Sarah Johnson"
+    },
+    {
+      "img": "img/testimonials/03.jpg",
+      "text": "\"Mohammed's attention to detail and commitment to quality make him an invaluable asset to any development team.\"",
+      "name": "Michael Brown"
+    }
+  ],
+  "Team": [
+    {
+      "img": "img/team/01.jpg",
+      "name": "Mohammed Moufakkir",
+      "job": "Full Stack Developer"
+    }
+  ],
+  "Contact": {
+    "address": "",
+    "phone": "+1 234 567 8900",
+    "email": "mmoufakkir2@gmail.com",
+    "facebook": "https://facebook.com/yourprofile",
+    "twitter": "https://twitter.com/yourhandle",
+    "linkedin": "https://www.linkedin.com/in/mohammed-moufakkir-10390b54/",
+    "github": "https://github.com/mmoufakkir1"
+  },
+  "Features": [
+    {
+      "icon": "fa fa-code",
+      "title": "Web Development",
+      "text": "Expert in building modern, responsive web applications using React and other cutting-edge technologies."
+    },
+    {
+      "icon": "fa fa-mobile-phone",
+      "title": "Mobile Apps",
+      "text": "Creating cross-platform mobile applications with React Native and Flutter for iOS and Android."
+    },
+    {
+      "icon": "fa fa-cloud",
+      "title": "Cloud Solutions",
+      "text": "Deploying and managing applications on cloud platforms like AWS, Azure, and Google Cloud."
+    },
+    {
+      "icon": "fa fa-database",
+      "title": "Database Design",
+      "text": "Designing and implementing efficient database solutions using SQL and NoSQL technologies."
+    }
+  ]
+}
