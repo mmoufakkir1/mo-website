@@ -18,7 +18,12 @@ export const Navigation = ({ onThemeToggle, isDarkTheme }) => {
             <span className="icon-bar"></span>{" "}
           </button>
           <a className="navbar-brand page-scroll" href="#page-top">
-           MOhammed Moufakkir Homepage
+            <img
+              src="img/logo.png"
+              alt="Logo"
+              style={{ height: 32, marginRight: 10, verticalAlign: 'middle', display: 'inline-block' }}
+            />
+            Mohammed Moufakkir Homepage
           </a>{" "}
         </div>
 
