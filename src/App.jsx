@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useRef } from "react";
 import { Navigation } from "./components/navigation";
 import { Header } from "./components/header";
 import { About } from "./components/about";
@@ -19,6 +19,7 @@ const App = () => {
   const [landingPageData, setLandingPageData] = useState(null);
   const [isDarkTheme, setIsDarkTheme] = useState(true);
   const [isLoading, setIsLoading] = useState(true);
+  const animatedElementsRef = useRef([]);
 
   useEffect(() => {
     // Simulate loading data
@@ -35,6 +36,33 @@ const App = () => {
     };
 
     loadData();
+  }, []);
+
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('animate');
+          }
+        });
+      },
+      { threshold: 0.1 }
+    );
+
+    animatedElementsRef.current.forEach((element) => {
+      if (element) {
+        observer.observe(element);
+      }
+    });
+
+    return () => {
+      animatedElementsRef.current.forEach((element) => {
+        if (element) {
+          observer.unobserve(element);
+        }
+      });
+    };
   }, []);
 
   const toggleTheme = () => {
@@ -56,12 +84,30 @@ const App = () => {
     >
       <Navigation onThemeToggle={toggleTheme} isDarkTheme={isDarkTheme} />
       <div className="content-wrapper">
-        <Header data={landingPageData?.Header} className="animate-fade-in" />
-        <About data={landingPageData?.About} className="animate-slide-up" />
-        <Skills className="animate-fade-in" />
-        <Timeline className="animate-slide-up" />
+        <Header 
+          data={landingPageData?.Header} 
+          ref={(el) => (animatedElementsRef.current[0] = el)}
+          className="animate-fade-in" 
+        />
+        <About 
+          data={landingPageData?.About} 
+          ref={(el) => (animatedElementsRef.current[1] = el)}
+          className="animate-slide-up" 
+        />
+        <Skills 
+          ref={(el) => (animatedElementsRef.current[2] = el)}
+          className="animate-fade-in" 
+        />
+        <Timeline 
+          ref={(el) => (animatedElementsRef.current[3] = el)}
+          className="animate-slide-up" 
+        />
         {/* <Gallery data={landingPageData?.Gallery} className="animate-fade-in" /> */}
-        <Contact data={landingPageData?.Contact} className="animate-fade-in" />
+        <Contact 
+          data={landingPageData?.Contact} 
+          ref={(el) => (animatedElementsRef.current[4] = el)}
+          className="animate-fade-in" 
+        />
       </div>
     </div>
   );
