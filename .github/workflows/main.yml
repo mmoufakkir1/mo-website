@@ -22,8 +22,9 @@ jobs:
         run: npm install
 
       - name: Build
-        echo "PUBLIC_URL=https://mmoufakkir1.github.io/mo-website" > .env.production
-        run: npm run build
+        run: |
+          echo "PUBLIC_URL=https://mmoufakkir1.github.io/mo-website" > .env.production
+          npm run build
 
       - name: Deploy to GitHub Pages
         uses: peaceiris/actions-gh-pages@v4
