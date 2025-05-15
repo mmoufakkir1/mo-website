@@ -1,13 +1,13 @@
 {
   "files": {
-    "main.css": "https://mmoufakkir1.github.io/mo-website/static/css/main.8eb78205.css",
-    "main.js": "https://mmoufakkir1.github.io/mo-website/static/js/main.d6460d8b.js",
+    "main.css": "https://mmoufakkir1.github.io/mo-website/static/css/main.15c1a2c0.css",
+    "main.js": "https://mmoufakkir1.github.io/mo-website/static/js/main.62aba86d.js",
     "index.html": "https://mmoufakkir1.github.io/mo-website/index.html",
-    "main.8eb78205.css.map": "https://mmoufakkir1.github.io/mo-website/static/css/main.8eb78205.css.map",
-    "main.d6460d8b.js.map": "https://mmoufakkir1.github.io/mo-website/static/js/main.d6460d8b.js.map"
+    "main.15c1a2c0.css.map": "https://mmoufakkir1.github.io/mo-website/static/css/main.15c1a2c0.css.map",
+    "main.62aba86d.js.map": "https://mmoufakkir1.github.io/mo-website/static/js/main.62aba86d.js.map"
   },
   "entrypoints": [
-    "static/css/main.8eb78205.css",
-    "static/js/main.d6460d8b.js"
+    "static/css/main.15c1a2c0.css",
+    "static/js/main.62aba86d.js"
   ]
 }
