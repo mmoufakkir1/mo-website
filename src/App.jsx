@@ -50,14 +50,15 @@ const App = () => {
       { threshold: 0.1 }
     );
 
-    animatedElementsRef.current.forEach((element) => {
+    const currentElements = animatedElementsRef.current;
+    currentElements.forEach((element) => {
       if (element) {
         observer.observe(element);
       }
     });
 
     return () => {
-      animatedElementsRef.current.forEach((element) => {
+      currentElements.forEach((element) => {
         if (element) {
           observer.unobserve(element);
         }

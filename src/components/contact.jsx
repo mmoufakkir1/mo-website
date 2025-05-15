@@ -1,5 +1,4 @@
-import React, { useState } from "react";
-import emailjs from "emailjs-com";
+import React from "react";
 
 export const Contact = (props) => {
   // Obfuscate email using array join
